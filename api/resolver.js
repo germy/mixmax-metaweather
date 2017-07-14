@@ -72,7 +72,7 @@ module.exports = function(req, res) {
     }
 
     res.json({
-      body: style + '<h3>Weather<br><a target="_blank" href="' + url + '"><small>' + url + '</small></a></h3><div class="row">' + html + '</div>'
+      body: style + '<h3>Weather in ' + response.body.title + ', ' + response.body.parent.title + '<br><a target="_blank" href="' + url + '"><small>' + url + '</small></a></h3><div class="row">' + html + '</div>'
         // Add raw:true if you're returning content that you want the user to be able to edit
     });
   });
