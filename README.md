@@ -21,9 +21,9 @@ Some urls to test
 * https://www.metaweather.com/2488042/
 
 Please update your settings to:
-Name: MetaWeather
-URL: metaweather.com/[^\/]+([0-9]+)(\/?)$
-Resolver: https://192.168.237.130:9146/resolver
+* Description: MetaWeather
+* Regular Expression: metaweather.com/[^\/]+([0-9]+)(\/?)$
+* Resolver API URL: https://192.168.237.130:9146/resolver
 
 
 
