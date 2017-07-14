@@ -2,6 +2,7 @@ var key = require('../utils/key');
 var request = require('request');
 var _ = require('underscore');
 var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+// inline html styles to format inline weather
 var style = '\
 <style>\
   body{\
@@ -35,6 +36,7 @@ var style = '\
 // The API that returns the in-email representation.
 module.exports = function(req, res) {
   var url = req.query.url.trim();
+  // parses url to ensure it is as epxected
   var matches = url.match(/([0-9]+)(\/?)$/);
   if (!matches) {
     res.status(400).send('Invalid URL format');
@@ -54,10 +56,12 @@ module.exports = function(req, res) {
       return;
     }
 
+    //parses the json to determine all the different days given back
     var html = '';
     var res_week = response.body.consolidated_weather;
     for (i = 0; i < res_week.length; i++){
       entry = res_week[i];
+      //attempts to describe the day of the week
       var day = '';
       if(i == 0){
         day = 'Today';
@@ -67,6 +71,7 @@ module.exports = function(req, res) {
         var date = new Date(entry.applicable_date)
         day = days[date.getDay()] + ', ' + date.getMonth() + '/' + date.getDate();
       }
+      //converts C to F
       temp = (parseFloat(entry.the_temp) * 9 / 5 + 32).toFixed(1).toString() + '&#8457;';
       html += '<div><h4>' + day + '</h4><img src="https://www.metaweather.com/static/img/weather/' + entry.weather_state_abbr + '.svg" alt="' + entry.weather_state_name + '"><br>' + temp + '</div>';
     }
