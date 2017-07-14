@@ -1,21 +1,21 @@
 {
-  "name": "giphy-example-link-resolver",
+  "name": "metaweather-link-resolver",
   "version": "0.0.1",
-  "description": "Giphy link resolver for Mixmax",
+  "description": "MetaWeather link resolver for Mixmax",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mixmaxhq/giphy-example-link-resolver.git"
+    "url": "https://github.com/germy/mixmax-metaweather.git"
   },
-  "author": "Chanpory Rith <chanpory@mixmax.com> (https://mixmax.com/)",
+  "author": "Jeremy Lee (leejeremy604@gmail.com), orignal author: Chanpory Rith <chanpory@mixmax.com> (https://mixmax.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mixmaxhq/giphy-example-link-resolver/issues"
+    "url": "https://github.com/germy/mixmax-metaweather/issues"
   },
-  "homepage": "https://github.com/mixmaxhq/giphy-example-link-resolver",
+  "homepage": "https://github.com/germy/mixmax-metaweather",
   "dependencies": {
     "body-parser": "^1.12.2",
     "cors": "^2.7.1",
