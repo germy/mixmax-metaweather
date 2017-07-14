@@ -23,7 +23,7 @@ Some urls to test
 Please update your settings to:
 * Description: MetaWeather
 * Regular Expression: metaweather.com/[^\/]+([0-9]+)(\/?)$
-* Resolver API URL: https://192.168.237.130:9146/resolver
+* Resolver API URL: https://localhost:9146/resolver
 
 
 
