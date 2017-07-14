@@ -20,6 +20,13 @@ Some urls to test
 * https://www.metaweather.com/2471217/
 * https://www.metaweather.com/2488042/
 
+Please update your settings to:
+Name: MetaWeather
+URL: metaweather.com/[^\/]+([0-9]+)(\/?)$
+Resolver: https://192.168.237.130:9146/resolver
+
+
+
 ## Why do we run it in https locally?
 
 Mixmax slash command APIs are required to be served over https. This is because they are queried directly from the Mixmax client in the browser (using AJAX) that's running on an HTTPS domain. Browsers forbid AJAX requests from https domains to call http APIs, for security. So we must run an https server with a locally-signed certificate.
